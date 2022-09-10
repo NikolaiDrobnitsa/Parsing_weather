@@ -98,9 +98,13 @@ namespace Parsing_table
             label21.Text = htmlNode.InnerText;
             htmlNode = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]");
             label22.Text = htmlNode.InnerText;
-            //image = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='rSide']//div[@class='description']//h2");
+
+
+            ////find XPATH
+            //image = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][2]//div[@class='weatherIco d200']");
             //srcUrl = image.XPath.ToString();
             //textBox1.Text += srcUrl;
+
             //foreach (HtmlNode link in htmlDoc.DocumentNode.SelectNodes("//p[@class='infoHistory']"))
             //{
             //    label23.Text = link.InnerText;
@@ -111,6 +115,102 @@ namespace Parsing_table
             label25.Text = htmlNode.InnerText.Replace("deg;", "° ");
             pictureBox11.BackgroundImage = Image.FromFile("termometr.PNG");
             //label2.Parent = pictureBox1;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='main loaded']//p[@class='day-link']");
+            label24.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='main loaded']//p[@class='date dateFree']");
+            label26.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='main loaded']//p[@class='month']");
+            label27.Text = htmlNode.InnerText;
+            image = htmlDoc.DocumentNode.SelectSingleNode("html[1]/body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/img[1]/@src[1]");
+            pictureBox12.Load("https:" + image.Attributes["src"].Value.ToString());
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='main loaded']//div[@class='temperature']//div[@class='min']");
+            label28.Text = htmlNode.InnerText.Replace("deg;", "° ");
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='main loaded']//div[@class='temperature']//div[@class='max']");
+            label29.Text = htmlNode.InnerText.Replace("deg;", "° ");
+
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='cityName cityNameShort']//h1");
+            label30.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='cityName cityNameShort']//div[@class='currentRegion']");
+            label31.Text = htmlNode.InnerText;
+
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main ']//p//a[@class='day-link']");
+            label34.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main ']//p[@class='date dateFree']");
+            label35.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main ']//p[@class='month']");
+            label36.Text = htmlNode.InnerText;
+            image = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/img[1]/@src[1]");
+            pictureBox13.Load("https:" + image.Attributes["src"].Value.ToString());
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main ']//div[@class='temperature']//div[@class='min']");
+            label32.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main ']//div[@class='temperature']//div[@class='max']");
+            label33.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][2]//p//a[@class='day-link']");
+            label39.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][2]//p[@class='date ']");
+            label40.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][2]//p[@class='month']");
+            label41.Text = htmlNode.InnerText;
+            image = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[6]/div[1]/img[1]/@src[1]");
+            pictureBox14.Load("https:" + image.Attributes["src"].Value.ToString());
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][2]//div[@class='temperature']//div[@class='min']");
+            label37.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][2]//div[@class='temperature']//div[@class='max']");
+            label38.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][3]//p//a[@class='day-link']");
+            label44.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][3]//p[@class='date ']");
+            label45.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][3]//p[@class='month']");
+            label46.Text = htmlNode.InnerText;
+            image = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[8]/div[1]/img[1]/@src[1]");
+            pictureBox15.Load("https:" + image.Attributes["src"].Value.ToString());
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][3]//div[@class='temperature']//div[@class='min']");
+            label42.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][3]//div[@class='temperature']//div[@class='max']");
+            label43.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][4]//p//a[@class='day-link']");
+            label49.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][4]//p[@class='date ']");
+            label50.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][4]//p[@class='month']");
+            label51.Text = htmlNode.InnerText;
+            image = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[10]/div[1]/img[1]/@src[1]");
+            pictureBox16.Load("https:" + image.Attributes["src"].Value.ToString());
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][4]//div[@class='temperature']//div[@class='min']");
+            label47.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][4]//div[@class='temperature']//div[@class='max']");
+            label48.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][5]//p//a[@class='day-link']");
+            label54.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][5]//p[@class='date ']");
+            label55.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][5]//p[@class='month']");
+            label56.Text = htmlNode.InnerText;
+            image = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[12]/div[1]/img[1]/@src[1]");
+            pictureBox17.Load("https:" + image.Attributes["src"].Value.ToString());
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][5]//div[@class='temperature']//div[@class='min']");
+            label52.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][5]//div[@class='temperature']//div[@class='max']");
+            label53.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][6]//p//a[@class='day-link']");
+            label59.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][6]//p[@class='date ']");
+            label60.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][6]//p[@class='month']");
+            label61.Text = htmlNode.InnerText;
+            image = htmlDoc.DocumentNode.SelectSingleNode("/html[1]/body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/div[14]/div[1]/img[1]/@src[1]");
+            pictureBox18.Load("https:" + image.Attributes["src"].Value.ToString());
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][6]//div[@class='temperature']//div[@class='min']");
+            label57.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='tabs']//div[@class='main '][6]//div[@class='temperature']//div[@class='max']");
+            label58.Text = htmlNode.InnerText.Replace("deg;", "° "); ;
+
 
 
 
