@@ -24,15 +24,14 @@ namespace Parsing_table
             String srcUrl;
             using (WebClient client = new WebClient())
             {
-                //client.DownloadFile("https://sinst.fwdcdn.com/img/weatherImg/b/d400.jpg", "d400.jpg");
                 client.DownloadFile("https://sinoptik.ua/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%B4%D0%BD%D0%B5%D0%BF%D1%80-303007131", "file.html");
-                //client.DownloadFile("https://sinst.fwdcdn.com/img/weatherImg/s/n420.gif", "n420.gif");
-                //client.DownloadFile("https://sinst.fwdcdn.com/img/weatherImg/s/n320.gif", "n320.gif");
-                //client.DownloadFile("https://sinst.fwdcdn.com/img/weatherImg/s/d400.gif", "n400.gif");
-                //client.DownloadFile("https://sinst.fwdcdn.com/img/weatherImg/s/d300.gif", "n300.gif");
-                //client.DownloadFile("https://sinst.fwdcdn.com/img/weatherImg/s/n100.gif", "n100.gif");
             }
             HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlAgilityPack.HtmlDocument();
+            var pos = this.PointToScreen(label2.Location);
+            pos = pictureBox1.PointToClient(pos);
+            label2.Parent = pictureBox1;
+            label2.Location = pos;
+            label2.BackColor = Color.Transparent;
             //htmlDoc.Load("file.html");
             htmlDoc.Load("file.html", Encoding.UTF8);
             pictureBox1.BackgroundImage = Image.FromFile("d400.jpg");
@@ -108,6 +107,13 @@ namespace Parsing_table
             //}
             htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//p[@class='infoHistory']");
             label23.Text = htmlNode.InnerText;
+            htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//p[@class='infoHistoryval']");
+            label25.Text = htmlNode.InnerText.Replace("deg;", "° ");
+            pictureBox11.BackgroundImage = Image.FromFile("termometr.PNG");
+            //label2.Parent = pictureBox1;
+
+
+
 
         }
 
