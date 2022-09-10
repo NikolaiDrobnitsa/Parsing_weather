@@ -58,6 +58,10 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -90,6 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
             this.label1.Location = new System.Drawing.Point(21, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
@@ -121,6 +126,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label4.Location = new System.Drawing.Point(180, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 13);
@@ -131,6 +137,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label5.Location = new System.Drawing.Point(180, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 13);
@@ -141,6 +148,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label6.Location = new System.Drawing.Point(197, 111);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 13);
@@ -151,6 +159,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label7.Location = new System.Drawing.Point(197, 133);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 13);
@@ -307,6 +316,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label16.Location = new System.Drawing.Point(197, 155);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(74, 13);
@@ -316,6 +326,7 @@
             // label17
             // 
             this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label17.Location = new System.Drawing.Point(196, 173);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(74, 31);
@@ -353,12 +364,55 @@
             this.label20.TabIndex = 29;
             this.label20.Text = "osad";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(649, 143);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(154, 107);
+            this.textBox1.TabIndex = 30;
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label21.Location = new System.Drawing.Point(263, 218);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(260, 32);
+            this.label21.TabIndex = 31;
+            this.label21.Text = "label21";
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label22.Location = new System.Drawing.Point(263, 279);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(378, 129);
+            this.label22.TabIndex = 32;
+            this.label22.Text = "label22";
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Location = new System.Drawing.Point(12, 280);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(89, 27);
+            this.label23.TabIndex = 33;
+            this.label23.Text = "label23";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -438,6 +492,10 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
     }
 }
 
